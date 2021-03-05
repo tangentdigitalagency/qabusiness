@@ -106,6 +106,25 @@ class App extends Component {
     console.log(this.state.postData);
   };
 
+
+
+
+  componentDidMount = () => {
+    var str = window.location.href
+    if (str.includes('utm_medium=facebook'))
+      this.setState({ Pub_ID: 103 }, () => {
+        //console.log(this.state.Pub_ID)
+      })
+    if (str.includes('utm_medium=adwords'))
+      this.setState({ Pub_ID: 101 }, () => {
+        //console.log(this.state.Pub_ID)
+      })
+    if (str.includes('utm_medium=bing'))
+      this.setState({ Pub_ID: 108 }, () => {
+        //console.log(this.state.Pub_ID)
+      })
+  };
+
   render() {
 
   return (
